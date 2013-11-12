@@ -12,6 +12,8 @@
     <context:component-scan base-package="no.meso.crm.rest" />
     <mvc:annotation-driven />
     
+    <mvc:resources mapping="/client/**" location="/client/" />
+    
     <bean id="MongoDBService" class="no.meso.crm.store.MongoDBService">
         <property name="seeds">
             <list>
@@ -19,16 +21,4 @@
             </list>
         </property>
     </bean>
-    
-    
-    <bean id="jacksonMessageConverter" class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />
-    
-    <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
-        <property name="messageConverters">
-            <list>
-                <ref bean="jacksonMessageConverter" />
-            </list>
-        </property>
-    </bean>
-    
 </beans>
