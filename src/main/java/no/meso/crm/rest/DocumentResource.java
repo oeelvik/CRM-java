@@ -69,9 +69,7 @@ public class DocumentResource {
     }
     
     @RequestMapping(
-            method = RequestMethod.DELETE,
-            consumes = MediaType.APPLICATION_JSON_VALUE,
-            produces = MediaType.APPLICATION_JSON_VALUE)
+            method = RequestMethod.DELETE)
     @ResponseStatus(value = HttpStatus.NO_CONTENT)
     public void deleteDocument(
             @PathVariable("collectionName") String collectionName,
