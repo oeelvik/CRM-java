@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * @author Øystein Schrøder Elvik
  */
 @Controller
-@RequestMapping("/collection/{collectionName:.*}/{documentId:.*}")
+@RequestMapping("/rest/data/{collectionName:.*}/{documentId:.*}")
 public class DocumentResource {
     
     @Autowired

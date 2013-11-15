@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author Øystein Schrøder Elvik
  */
 @Controller
-@RequestMapping("/collection/{collectionName:.*}")
+@RequestMapping("/rest/data/{collectionName:.*}")
 public class CollectionResource {
     
     @Autowired
